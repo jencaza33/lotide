@@ -44,7 +44,6 @@ assertEqual(findKey({ "Blue Hill": { stars: 1 },
   "Akelarre":  { stars: 3 }
 }, x => x.stars === 4), undefined);
 
-module.exports = findKey;
 
 // const callback = function(x){
 // if (x.stars ===2){
