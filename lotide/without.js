@@ -22,11 +22,10 @@ const eqArrays = (arr1, arr2) => {
   return true;
 };
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🟢✅🟢 Assertion Passed:  ${actual} === ${expected}`);
-  } else {
-    console.log(`🔴🔴🔴 Assertion Failed:  ${actual} !== ${expected}`);
-  }
-
+const assertArraysEqual = (arr1, arr2) => {
+  if (eqArrays(arr1, arr2)) return console.log(`✅✅✅ Assertion Passed: ${arr1} === ${arr2}`);
+  else return console.log(`🛑🛑🛑 Assertion Failed: ${arr1} !== ${arr2}`);
 };
+
+assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
+assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
